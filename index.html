@@ -23,6 +23,7 @@
             display: flex;
             justify-content: space-around;
             margin-top: 30px;
+            flex-wrap: wrap; /* Allows items to wrap on smaller screens */
         }
         .settings {
             width: 30%;
@@ -56,6 +57,39 @@
             text-align: right;
             margin-top: 40px;
             margin-right: 20px;
+        }
+
+        /* Mobile-friendly adjustments */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.5em; /* Slightly smaller title font size */
+                margin-bottom: 20px;
+            }
+            .settings-container {
+                flex-direction: column; /* Stack settings sections vertically */
+                align-items: center;
+            }
+            .settings {
+                width: 80%; /* Take up more width on small screens */
+                margin-bottom: 20px; /* Add space between sections */
+            }
+            .content-links a {
+                margin: 0 10px; /* Smaller margin for links */
+            }
+            .signature {
+                font-size: 14px; /* Smaller font size for the signature */
+                margin-right: 10px; /* Less margin on the right */
+            }
+        }
+
+        /* Extra mobile-friendly adjustments for very small screens */
+        @media (max-width: 480px) {
+            .settings {
+                width: 100%; /* Full width for even smaller screens */
+            }
+            h1 {
+                font-size: 1.2em; /* Further reduce title size for small screens */
+            }
         }
     </style>
 </head>
